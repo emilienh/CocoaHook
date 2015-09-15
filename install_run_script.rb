@@ -3,8 +3,8 @@
 require 'pathname'
 require 'xcodeproj'
 
-path_to_xcode_build_script = '"${SRCROOT}/Pods/POD_NAME/run_script.sh"'
-xcode_build_script_name = 'Unique Run Script Name'
+path_to_xcode_build_script = '"${SRCROOT}/Pods/CocoaHook/run_script.sh"'
+xcode_build_script_name = 'CocoaHook'
 
 puts Dir.pwd
 puts ARGV[0]
