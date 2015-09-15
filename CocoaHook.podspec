@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '6.0'
   s.requires_arc    = true
-  s.source_files    = "Classes/**/*.{h,m}"
+  s.source_files    = "*.{h,m}"
   s.preserve_paths  = 'run_script.sh', 'install_run_script.rb'
 
   s.prepare_command = "ruby install_run_script.rb '#{path}'"
