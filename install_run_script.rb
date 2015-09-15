@@ -6,12 +6,12 @@ require 'xcodeproj'
 path_to_xcode_build_script = '"${SRCROOT}/Pods/CocoaHook/run_script.sh"'
 xcode_build_script_name = 'CocoaHook'
 
-puts Dir.pwd
-puts ARGV[0]
+puts "current folder: #{Dir.pwd}"
+puts "path to spec #{ARGV[0]}"
 
 path_to_spec = ARGV[0] # Passed from podspec using path variable
 
-if path_to_spec.start_with?('/private')
+if !path_to_spec || path_to_spec.start_with?('/private')
   # CocoaPods Lint
   # e.g. /private/tmp/CocoaPods/Lint/Pods/Local Podspecs/POD_NAME.podspec
 
